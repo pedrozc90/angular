@@ -1,2 +1,7 @@
-# angular
-angular boilerplate
+# Angular
+
+Angular boilerplate
+
+## License
+
+Please, see [LICENSE](./LICENSE) file.
