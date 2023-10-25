@@ -1,0 +1,26 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    height: 100%;
+
+    form {
+        place-self: center;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 70%;
+        margin: 0 auto;
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+
+            label {
+                text-align: end;
+            }
+        }
+    }
+}

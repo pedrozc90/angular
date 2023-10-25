@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+
+:host {
+    @include grid();
+    height: inherit;
+    
+    .content {
+        place-self: center;
+        @include grid();
+        place-items: center;
+
+        h1, h2, p, span {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 9.375rem;
+            margin: 0;
+        }
+    }
+}

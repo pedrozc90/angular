@@ -1,0 +1,19 @@
+<app-title></app-title>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of users; let index = index;" (click)="onOpen(row)">
+            <td>{{ index }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.username }}</td>
+            <td>{{ row.active ? 'Active' : 'Inactive' }}</td>
+        </tr>
+    </tbody>
+</table>

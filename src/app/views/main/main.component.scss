@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    height: inherit;
+    width: inherit;
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

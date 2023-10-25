@@ -1,0 +1,11 @@
+<form [formGroup]="formGroup">
+    <div class="row">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" formControlName="email">
+    </div>
+    <div class="row">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" formControlName="password">
+    </div>
+    <button (click)="onLogin()" [disabled]="formGroup.invalid">Save</button>
+</form>

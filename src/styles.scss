@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/colors";
+
+html {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, system-ui;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}

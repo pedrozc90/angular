@@ -1,0 +1,20 @@
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
+
+:host {
+    @include grid(auto 100px);
+    grid-template-areas: "list logout";
+    background-color: $text-color;
+    padding: 1rem;
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .logout {
+        grid-area: logout;
+        color: white;
+    }
+}
