@@ -10,6 +10,7 @@ import { ViewsModule } from "./views/views.module";
 import { CoreModule } from "./core/core.module";
 import { ServicesModule } from "./core/services.module";
 import { ComponentsModule } from "./components/components.module";
+import { MaterialModule } from "./core/material.module";
 
 @NgModule({
     declarations: [
@@ -27,7 +28,9 @@ import { ComponentsModule } from "./components/components.module";
         CoreModule,
         ServicesModule,
         ComponentsModule,
-        ViewsModule
+        ViewsModule,
+        // external
+        MaterialModule
     ],
     providers: [],
     bootstrap: [AppComponent]
