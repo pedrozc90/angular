@@ -31,11 +31,11 @@ export class LoginComponent {
         if (this.formGroup.invalid || this.formGroup.untouched) return;
 
         const value = this.formGroup.getRawValue();
-
-        this.authentication.login(value).subscribe((res) => {
-            this.authentication.authenticate(res);
-            this.router.navigate([ "home" ]);
-        });
+        console.log(value);
+        // this.authentication.login(value).subscribe((res) => {
+        //     this.authentication.authenticate(res);
+        //     this.router.navigate([ "home" ]);
+        // });
     }
 
 }

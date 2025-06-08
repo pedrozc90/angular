@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup">
     <div class="row">
-        <app-input label="E-mail" placeholder="E-mail" type="email"></app-input>
+        <app-input label="E-mail" placeholder="E-mail" type="email" name="email"></app-input>
         <!-- <label for="email">E-mail</label>
         <input id="email" name="email" type="email" formControlName="email"> -->
     </div>
@@ -8,5 +8,5 @@
         <label for="password">Password</label>
         <input id="password" name="password" type="password" formControlName="password">
     </div>
-    <button (click)="onLogin()" [disabled]="formGroup.invalid">Save</button>
+    <button (click)="onLogin()">Save</button>
 </form>
