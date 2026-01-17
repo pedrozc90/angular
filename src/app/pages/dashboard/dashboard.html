@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="header">
+        <h2>Dashboard</h2>
+        @if (loading()) {
+            <span>Loading...</span>
+        }
+    </div>
+
+    <div class="filters">
+        <form [formGroup]="form" (ngSubmit)="search()">
+            <label for="q">Search</label>
+            <input id="q" name="q" type="text" placeholder="Search..." formControlName="q" />
+            <button type="submit" [disabled]="form.invalid">Search</button>
+        </form>
+    </div>
+
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Result</th>
+                    <th>Method</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (f of files(); track f.id) {
+                    <tr>
+                        <td class="center">{{ f.id }}</td>
+                        <td class="left">{{ f.document }}</td>
+                        <td class="center">{{ f.type | documentType }}</td>
+                        <td class="center">{{ f.status | documentStatus }}</td>
+                        <td class="center">{{ f.results }}</td>
+                        <td class="center">{{ f.method }}</td>
+                        <td class="center">{{ f.source }}</td>
+                        <td class="center">{{ f.destination }}</td>
+                    </tr>
+                }
+
+                @if (!loading() && files().length === 0) {
+                    <tr>
+                        <td colspan="8">No results</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <span>{{ files().length }} / {{ total() }}</span>
+            <span>|</span>
+            <span class="page">Page {{ page() }}</span>
+            <hr/>
+            <button class="prev" (click)="prev()" [disabled]="!hasPrev()">Prev</button>
+            <button class="next" (click)="next()" [disabled]="!hasNext()">Next</button>
+        </div>
+    </div>
+</div>

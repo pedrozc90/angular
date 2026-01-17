@@ -1,0 +1,22 @@
+{
+  "page": 1,
+  "rpp": "{{request.query.rows}}",
+  "total": 25,
+  "list": [
+        { "id":  1, "document": "DOC-0000001", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  2, "document": "DOC-0000002", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  3, "document": "DOC-0000003", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  4, "document": "DOC-0000004", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  5, "document": "DOC-0000005", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  6, "document": "DOC-0000006", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  7, "document": "DOC-0000007", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  8, "document": "DOC-0000008", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id":  9, "document": "DOC-0000009", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 10, "document": "DOC-0000010", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 11, "document": "DOC-0000011", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 12, "document": "DOC-0000012", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 13, "document": "DOC-0000013", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 14, "document": "DOC-0000014", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 15, "document": "DOC-0000015", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" }
+    ]
+}

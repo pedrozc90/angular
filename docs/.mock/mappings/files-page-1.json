@@ -1,0 +1,22 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "GET",
+        "urlPath": "/api/files",
+        "queryParameters": {
+            "page": {
+                "equalTo": "1"
+            }
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Access-Control-Allow-Origin": "http://localhost:4200",
+            "Access-Control-Allow-Credentials": "true",
+            "Content-Type": "application/json"
+        },
+        "transformers": ["response-template"],
+        "bodyFileName": "data/page-1.json"
+    }
+}

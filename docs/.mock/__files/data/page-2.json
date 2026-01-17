@@ -1,0 +1,12 @@
+{
+  "page": 2,
+  "rpp": "{{request.query.rows}}",
+  "total": 25,
+  "list": [
+        { "id": 16, "document": "DOC-0000016", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 17, "document": "DOC-0000017", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 18, "document": "DOC-0000018", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 19, "document": "DOC-0000019", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" },
+        { "id": 20, "document": "DOC-0000020", "type": "INPUT", "status": "ONGOING", "results": 0, "method": "RFID", "source": "None", "destination": "None" }
+    ]
+}

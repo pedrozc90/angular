@@ -1,0 +1,28 @@
+{
+    "request": {
+        "method": "POST",
+        "urlPath": "/api/login",
+        "bodyPatterns": [
+            {
+                "equalToJson": {
+                    "email": "pedrozc90@angular.com",
+                    "password": "angular"
+                }
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Access-Control-Allow-Origin": "http://localhost:4200",
+            "Access-Control-Allow-Credentials": "true",
+            "Set-Cookie": [
+                "SESSION_ID=abc123; Path=/; HttpOnly; Secure",
+                "CSRF_TOKEN=xyz789; Path=/"
+            ]
+        },
+        "jsonBody": {
+            "user": "admin"
+        }
+    }
+}

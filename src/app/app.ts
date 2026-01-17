@@ -1,12 +1,22 @@
-import { Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, OnInit, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 
+import { environment } from "../environments/environment";
+
 @Component({
+    standalone: true,
     selector: "app-root",
-    imports: [RouterOutlet],
+    styleUrl: "./app.scss",
     templateUrl: "./app.html",
-    styleUrl: "./app.scss"
+    imports: [RouterOutlet],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class App {
+export class App implements OnInit {
+    
     protected readonly title = signal("blank");
+
+    public ngOnInit(): void {
+        console.log("Environment:", environment);
+    }
+
 }

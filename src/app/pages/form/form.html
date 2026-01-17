@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+        <div class="field">
+            <label for="document">Dcoument</label>
+            <input id="document" name="document" type="text" formControlName="document" placeholder="Dcoument" />
+        </div>
+
+        <div class="field">
+            <label for="type">Type</label>
+            <select id="type" name="type" formControlName="type">
+                @for (t of types; track t) {
+                    <option [value]="t">{{ t }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="status">Status</label>
+            <select id="status" name="type" formControlName="status">
+                @for (s of statuses; track s) {
+                    <option [value]="s">{{ s }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="results">Results</label>
+            <input id="results" name="results" type="number" formControlName="results" placeholder="Results" />
+        </div>
+
+        <div class="field">
+            <label for="source">Source</label>
+            <input id="source" name="source" type="text" formControlName="source" placeholder="Source" />
+        </div>
+
+        <div class="field">
+            <label for="destination">Destination</label>
+            <input id="destination" name="destination" type="text" formControlName="destination" placeholder="Destination" />
+        </div>
+
+        <button type="submit" [disabled]="form.invalid">
+            <div>
+                <span class="material-symbols-sharp">save</span>
+                <span>Save</span>
+            </div>
+        </button>
+    </form>
+</div>

@@ -1,0 +1,6 @@
+{
+  "page": "{{request.query.page}}",
+  "rpp": "{{request.query.rows}}",
+  "total": 25,
+  "list": []
+}

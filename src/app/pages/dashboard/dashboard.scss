@@ -1,0 +1,39 @@
+:host {
+    // display: grid;
+    height: inherit;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .filters {
+        form {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            label {
+                display: none;
+            }
+        }
+    }
+
+    .content {
+       display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem; 
+    }
+
+    .pagination {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}

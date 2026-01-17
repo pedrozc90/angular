@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+        <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" formControlName="email" autocomplete="true"/>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="text" formControlName="password" autocomplete="true"/>
+        </div>
+        <button type="submit" [disabled]="form.invalid">
+            <div>
+                <span class="material-symbols-sharp">login</span>
+                <span>Login</span>
+            </div>
+        </button>
+    </form>
+</div>

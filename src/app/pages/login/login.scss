@@ -1,0 +1,45 @@
+:host {
+    display: grid;
+    height: inherit;
+
+    .container {
+        place-self: center;
+
+        min-width: 30%;
+        background-color: white;
+        border: 1px solid var(--border-color);
+        padding: 1rem;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .field {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.25rem;
+            
+            label {
+                font-size: 0.75rem;
+                font-weight: bold;
+            }
+        }
+
+        button[type="submit"] {
+            div {
+                place-self: center;
+                display: flex;
+                flex-direction: row;
+                gap: 0.25rem;
+
+                span {
+                    &:last-of-type {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}

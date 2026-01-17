@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/colors";
+@use "./styles/mixins";
+@use "./styles/table.scss";
+
+// Global Variables
+:root {
+    --primary-color: rgb(47, 89, 255);
+    --accent-color: #2a79d9;
+
+    --text-color: #262626;
+    --border-color: rgba(0, 0, 0, 0.12);
+    --background-color: rgb(240, 240, 240);
+
+    --success-color: green;
+    --error-color: #f44336;
+    --warn-color: #ffd700;
+}
+
+// Global Styles
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    font-family: "Open Sans", Montserrat, Roboto, "Helvetica Neue", sans-serif;
+    font-style: normal;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}

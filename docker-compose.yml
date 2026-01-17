@@ -1,0 +1,14 @@
+services:
+    wiremock:
+        image: wiremock/wiremock:3x-alpine
+        container_name: wiremock
+        hostname: wiremock
+        restart: unless-stopped
+        ports:
+            - "4000:8080"
+        volumes:
+            - $PWD/docs/.mock/mappings:/home/wiremock/mappings
+            - $PWD/docs/.mock/__files:/home/wiremock/__files
+        command:
+            - "--verbose"
+            - "--global-response-templating"
