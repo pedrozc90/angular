@@ -10,7 +10,12 @@
         <form [formGroup]="form" (ngSubmit)="search()">
             <label for="q">Search</label>
             <input id="q" name="q" type="text" placeholder="Search..." formControlName="q" />
-            <button type="submit" [disabled]="form.invalid">Search</button>
+            <button type="submit" [disabled]="form.invalid">
+            <div>
+                <span class="material-symbols-sharp">search</span>
+                <span>Search</span>
+            </div>
+        </button>
         </form>
     </div>
 

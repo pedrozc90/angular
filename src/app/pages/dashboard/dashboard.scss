@@ -36,4 +36,19 @@
         gap: 1rem;
         padding: 0.5rem;
     }
+
+    button[type="submit"] {
+        div {
+            place-self: center;
+            display: flex;
+            flex-direction: row;
+            gap: 0.25rem;
+
+            span {
+                &:last-of-type {
+                    align-self: center;
+                }
+            }
+        }
+    }
 }
