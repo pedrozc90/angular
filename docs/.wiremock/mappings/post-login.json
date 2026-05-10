@@ -1,0 +1,25 @@
+{
+	"request": {
+		"method": "POST",
+		"url": "/api/login"
+	},
+	"response": {
+		"status": 200,
+		"headers": {
+			"Access-Control-Allow-Origin": "http://localhost:4200",
+			"Access-Control-Allow-Credentials": "true",
+			"Access-Control-Allow-Headers": "Content-Type, Authorization",
+			"Content-Type": "application/json",
+			"Set-Cookie": [
+				"AccessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3IxMjMiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3MTYwMDAwMDB9.mock_signature; HttpOnly; Path=/; Max-Age=900; SameSite=Strict",
+				"RefreshToken=dGhpcy1pcy1hLW1vY2stcmVmcmVzaC10b2tlbi0xMjM0NTY3ODk; HttpOnly; Path=/; Max-Age=900; SameSite=Strict"
+			]
+		},
+		"jsonBody": {
+			"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3IxMjMiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3MTYwMDAwMDB9.mock_signature",
+			"refresh_token": "dGhpcy1pcy1hLW1vY2stcmVmcmVzaC10b2tlbi0xMjM0NTY3ODk",
+			"token_type": "Bearer",
+			"expires_in": 900
+		}
+	}
+}

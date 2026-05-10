@@ -1,0 +1,19 @@
+@mixin grid($template: 1fr, $gap: 1rem) {
+	display: grid;
+	grid-template-columns: $template;
+	gap: $gap;
+}
+
+@mixin flex($direction: row, $gap: 1rem) {
+	display: flex;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin flex-row($gap: 1rem) {
+	@include flex(row, $gap);
+}
+
+@mixin flex-column($gap: 1rem) {
+	@include flex(column, $gap);
+}

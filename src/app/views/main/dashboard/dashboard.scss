@@ -1,0 +1,19 @@
+:host {
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	// color: #e8e8e8;
+	font-family: "DM Sans", sans-serif;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.quote {
+	color: #888;
+	font-size: 0.875rem;
+	margin: 0;
+}

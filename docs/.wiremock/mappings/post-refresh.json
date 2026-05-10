@@ -1,0 +1,27 @@
+{
+	"request": {
+		"method": "POST",
+		"url": "/api/refresh",
+		"cookies": {
+			"RefreshToken": {
+				"matches": ".+"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"headers": {
+			"Content-Type": "application/json",
+			"Set-Cookie": [
+				"AccessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3IxMjMiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3MTYwMDkwMDB9.refreshed_mock_signature; HttpOnly; Path=/; Max-Age=900; SameSite=Strict",
+				"RefreshToken=dGhpcy1pcy1hLW5ldy1yZWZyZXNoLXRva2VuLTk4NzY1NDMyMQ; HttpOnly; Path=/; Max-Age=900; SameSite=Strict"
+			]
+		},
+		"jsonBody": {
+			"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c3IxMjMiLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3MTYwMDkwMDB9.refreshed_mock_signature",
+			"refresh_token": "dGhpcy1pcy1hLW5ldy1yZWZyZXNoLXRva2VuLTk4NzY1NDMyMQ",
+			"token_type": "Bearer",
+			"expires_in": 900
+		}
+	}
+}

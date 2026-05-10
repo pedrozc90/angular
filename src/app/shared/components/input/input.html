@@ -1,0 +1,38 @@
+@if (label(); as label) {
+	<label class="label" [for]="for()">{{ label }}</label>
+}
+
+<div class="wrapper">
+	<input
+		class="input"
+		[id]="id()"
+		[name]="id()"
+		[type]="activeType()"
+		[placeholder]="placeholder()"
+		[autocomplete]="autocomplete()"
+		[(ngModel)]="value"
+		(ngModelChange)="onChange($event)"
+		(blur)="onTouched()"
+		[disabled]="disabled()"
+	/>
+	@if (type() === "password") {
+		<button
+			type="button"
+			class="toggle"
+			(click)="click($event)"
+			[attr.aria-label]="visible() ? 'Hide password' : 'Show password'"
+		>
+			{{ visible() ? "●" : "○" }}
+		</button>
+	}
+</div>
+
+<!-- @if (form.password(); as password) {
+    @if (password.touched() && password.invalid()) {
+        <ul class="error-list">
+            @for (error of password.errors(); track $index) {
+                <li>{{ error.message }}</li>
+            }
+        </ul>
+    }
+} -->

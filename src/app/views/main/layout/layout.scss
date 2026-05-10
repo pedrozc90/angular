@@ -1,0 +1,10 @@
+:host {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 85px auto;
+	gap: 0;
+}
+
+aside {
+	background-color: var(--primary-color);
+}

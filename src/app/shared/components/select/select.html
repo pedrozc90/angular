@@ -1,0 +1,20 @@
+@if (label(); as label) {
+	<label class="label" [for]="for()">{{ label }}</label>
+}
+
+<select
+	[id]="name()"
+	[name]="name()"
+	[(ngModel)]="selected"
+	(ngModelChange)="onChange($event)"
+	(blur)="onTouched()"
+	[disabled]="disabled()"
+>
+	@if (nullable(); as nullable) {
+		<option [value]="null" disabled>{{ nullable }}</option>
+	}
+
+	@for (opt of options(); track $index) {
+		<option [value]="value(opt)">{{ text(opt) }}</option>
+	}
+</select>

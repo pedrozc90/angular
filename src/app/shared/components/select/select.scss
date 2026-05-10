@@ -1,0 +1,19 @@
+:host {
+	--select-border-color: var(--border-color, #ccc);
+	--select-border-radius: 0;
+}
+
+select {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid var(--select-border-color);
+	border-radius: var(--select-border-radius);
+
+	font-family: inherit;
+	font-size: 1rem;
+
+	&:focus {
+		outline: none;
+		border-color: var(--primary-color);
+	}
+}

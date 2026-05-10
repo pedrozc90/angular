@@ -1,0 +1,22 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/api/me",
+		"headers": {
+			"Cookie": {
+				"absent": true
+			}
+		}
+	},
+	"response": {
+		"status": 401,
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"jsonBody": {
+			"error": "Unauthorized",
+			"message": "Missing or invalid authentication token"
+		}
+	},
+	"priority": 1
+}

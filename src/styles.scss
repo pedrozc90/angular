@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/colors" as *;
+@use "./styles/mixins" as *;
+@use "./styles/variables" as *;
+
+:root {
+	--primary-color: #4285f4;
+
+	--text-color: #2a2a2a;
+	--text-light-color: #a2a2a2;
+
+	--border-color: #d3d3d3;
+	--border-radius: 0;
+	--border: 1px solid var(--border-color);
+
+	--background-color: whitesmoke;
+
+	--font-family-sans: "DM Sans", system-ui, sans-serif;
+	--font-family-mono: "DM Mono", monospace;
+	--font-family: Inter, system-ui, sans-serif;
+}
+
+html {
+	font-family: var(--font-family);
+	line-height: 1.5rem;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	// color: var(--primary-color);
+	font-weight: 500;
+	text-decoration: none;
+
+	// &:hover {
+	//     text-decoration: underline;
+	// }
+
+	// &:active {
+	//     color: red;
+	// }
+
+	// &:focus {
+	//     color: purple;
+	// }
+
+	// &:visited {
+	//     color: yellow;
+	// }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.75rem;
+}

@@ -1,0 +1,52 @@
+<div class="header">
+	<h1 class="text">Registration</h1>
+	<span class="quote">Fill in the form to continue</span>
+</div>
+
+<form class="form" (submit)="submit($event)" novalidate>
+	<s-input type="text" label="Name" placeholder="Your name" [formField]="form.name" />
+
+	<s-input type="email" label="Email" placeholder="username@email.com" [formField]="form.email" />
+
+	<s-input type="password" label="Password" placeholder="Min. 6 characters" [formField]="form.password" />
+
+	@if (form.password(); as control) {
+		@if (control.touched() && control.invalid()) {
+			<ul class="error-list">
+				@for (error of control.errors(); track $index) {
+					<li>{{ error.message }}</li>
+				}
+			</ul>
+		}
+	}
+
+	<s-input type="password" label="Confirm Password" placeholder="Min. 6 characters" [formField]="form.confirm_password" />
+
+	@if (form.confirm_password(); as control) {
+		@if (control.touched() && control.invalid()) {
+			<ul class="error-list">
+				@for (error of control.errors(); track $index) {
+					<li>{{ error.message }}</li>
+				}
+			</ul>
+		}
+	}
+
+	<select type="select" label="Role" placeholder="Select a role" [formField]="form.role">
+		<option [value]="null" disabled>Select a role</option>
+		@for (role of roles; track role.value) {
+			<option [value]="role.value">{{ role.metadata.label }}</option>
+		}
+	</select>
+
+	<s-select
+		label="Role"
+		placeholder="Select a role"
+		[formField]="form.role"
+		[options]="roles"
+		[value]="(r) => r.value"
+		[text]="(r) => r.metadata.label"
+	/>
+
+	<s-button type="submit" icon="save" label="Save" />
+</form>

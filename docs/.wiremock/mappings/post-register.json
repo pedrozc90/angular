@@ -1,0 +1,21 @@
+{
+	"request": {
+		"method": "POST",
+		"url": "/api/register"
+	},
+	"response": {
+		"status": 201,
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"jsonBody": {
+			"id": "0",
+			"uuid": "00000000-0000-0000-0000-000000000000",
+			"name": "User",
+			"email": "user@example.com",
+			"username": "user",
+			"role": "GUEST",
+			"created_at": "2026-05-109T12:00:00.000Z"
+		}
+	}
+}

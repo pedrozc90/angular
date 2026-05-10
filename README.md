@@ -22,7 +22,7 @@ Open [http://localhost:4200](http://localhost:4200) in your browser.
 ## Scripts
 
 | Command          | Description          |
-|:-----------------|:---------------------|
+| :--------------- | :------------------- |
 | `npm start    `  | Start dev server     |
 | `npm test`       | Run tests            |
 | `npm run build`  | Build for production |

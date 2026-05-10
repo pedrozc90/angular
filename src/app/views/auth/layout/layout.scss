@@ -1,0 +1,21 @@
+:host {
+	height: 100vh;
+
+	display: grid;
+	grid-template-columns: auto 35%;
+	gap: 0;
+}
+
+.cover {
+	background-image: url("/images/cover.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}

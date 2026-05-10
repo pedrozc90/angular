@@ -1,0 +1,17 @@
+{
+	"request": {
+		"method": "POST",
+		"url": "/api/logout"
+	},
+	"response": {
+		"status": 200,
+		"headers": {
+			"Content-Type": "application/json",
+			"Set-Cookie": "AccessToken=; HttpOnly; Path=/; Max-Age=0; SameSite=Strict"
+		},
+		"jsonBody": {
+			"success": true,
+			"message": "Logged out successfully"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<div class="header">
+	<h1 class="text">Angular Boilerplate</h1>
+	<span class="quote">Sign in to continue</span>
+</div>
+
+<form class="form" (submit)="onSubmit($event)" novalidate>
+	<s-input type="email" name="email" label="Email" placeholder="username@email.com" [formField]="form.email" />
+
+	<s-input type="password" name="password" label="Password" placeholder="Min. 6 characters" [formField]="form.password" />
+
+	@if (error(); as error) {
+		<div class="alert alert--error" role="alert">
+			<span>{{ error }}</span>
+		</div>
+	}
+
+	<s-button type="submit" icon="login" label="Login" />
+</form>
+
+<div class="footer">
+	<span class="text">Don't have an account? <a routerLink="/register">Request access</a></span>
+</div>

@@ -1,0 +1,8 @@
+<div class="content">
+	<h1 class="text">Welcome, {{ user().name }}</h1>
+
+	<span class="quote">You are signed in.</span>
+
+	<s-button icon="refresh" label="Refresh" (click)="refresh($event)" />
+	<s-button icon="logout" label="Sign out" (click)="logout($event)" />
+</div>

@@ -1,0 +1,13 @@
+<button [type]="type()" [disabled]="disabled()">
+	@if (icon(); as icon) {
+		<s-icon [icon]="icon" />
+	}
+
+	@if (label(); as label) {
+		<span class="label">{{ label }}</span>
+	}
+
+	@if (loading() && !disabled()) {
+		<span class="loading"></span>
+	}
+</button>

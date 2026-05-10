@@ -1,0 +1,27 @@
+{
+	"request": {
+		"method": "GET",
+		"url": "/api/me",
+		"cookies": {
+			"AccessToken": {
+				"matches": ".+"
+			}
+		}
+	},
+	"response": {
+		"status": 200,
+		"headers": {
+			"Content-Type": "application/json"
+		},
+		"jsonBody": {
+			"id": "0",
+			"uuid": "00000000-0000-0000-0000-000000000000",
+			"inserted_at": "2026-05-10T10:30:00.000Z",
+			"updated_at": "2026-05-10T10:30:00.000Z",
+			"name": "me",
+			"email": "me@email.com",
+			"username": "me",
+			"role": "GUEST"
+		}
+	}
+}
