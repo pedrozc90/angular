@@ -1,6 +1,6 @@
 <button [type]="type()" [disabled]="disabled()">
 	@if (icon(); as icon) {
-		<s-icon [icon]="icon" />
+		<s-icon>{{ icon }}</s-icon>
 	}
 
 	@if (label(); as label) {

@@ -6,7 +6,10 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from "@angular/f
 	selector: "s-select",
 	styleUrl: "./select.scss",
 	templateUrl: "./select.html",
-	imports: [FormsModule],
+	imports: [
+		// Angular
+		FormsModule
+	],
 	providers: [
 		{
 			provide: NG_VALUE_ACCESSOR,

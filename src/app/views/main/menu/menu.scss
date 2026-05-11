@@ -1,0 +1,44 @@
+@use "../../../../styles/variables" as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    color: white;
+    background-color: var(--primary-color);
+    margin: 1rem;
+}
+
+.logo {
+    font-size: 3rem;
+    height: 53px;
+    width: 53px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo-mark {
+        height: 53px;
+        width: 53px;
+        line-height: 53px;
+        text-align: center;
+    }
+}
+
+.item,
+.logout {
+    border: 1px solid black;
+    width: calc($menu-width - 2.5rem);
+    aspect-ratio: 1 / 1;
+}
+
+.item {
+    // aspect-ratio: 1 / 1;
+}
+
+.logout {
+    // aspect-ratio: 1 / 1;
+    --s-button-padding: 0.5rem;
+}

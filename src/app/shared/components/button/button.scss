@@ -1,14 +1,15 @@
 :host {
-	--button-text-color: white;
-	--button-border-color: var(--border-color);
-	--button-background-color: var(--primary-color);
+	--s-button-text-color: white;
+	--s-button-border-color: var(--border-color);
+	--s-button-background-color: var(--primary-color);
+	--s-button-padding: 0.5rem 1rem;
 }
 
 button {
 	width: 100%;
-	padding: 0.5rem 1rem;
-	color: var(--button-text-color);
-	background-color: var(--button-background-color);
+	padding: var(--s-button-padding);
+	color: var(--s-button-text-color);
+	background-color: var(--s-button-background-color);
 
 	font-family: inherit;
 	font-size: 1rem;
@@ -45,7 +46,7 @@ button {
 		opacity: 0.6;
 		cursor: not-allowed;
 		color: var(--text-color);
-		background-color: var(--button-border-color);
+		background-color: var(--s-button-border-color);
 	}
 }
 
@@ -55,7 +56,7 @@ button {
 	display: inline-block;
 	animation: spin 0.6s linear infinite;
 	border: 2px solid rgba(0, 0, 0, 0.25);
-	border-top-color: var(--button-text-color);
+	border-top-color: var(--s-button-text-color);
 	border-radius: 50%;
 }
 

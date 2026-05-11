@@ -9,7 +9,6 @@ import { ChangeDetectionStrategy, Component, HostBinding, input } from "@angular
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
-	public icon = input.required<string>();
 	public type = input<"sharp" | "rounded" | "outlined">("sharp");
 
 	@HostBinding("class")

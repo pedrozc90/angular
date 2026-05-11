@@ -30,6 +30,10 @@ body {
 	margin: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 a {
 	// color: var(--primary-color);
 	font-weight: 500;

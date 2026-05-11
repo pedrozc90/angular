@@ -1,0 +1,19 @@
+@if (data(); as data) {
+    @if ("route" in data) {
+        <a [routerLink]="data.route" routerLinkActive="active">
+            <s-icon class="icon">{{ data.icon }}</s-icon>
+            <!-- <span class="label">{{ data.label }}</span> -->
+        </a>
+    }
+
+    @if ("separator" in data && data.separator) {
+        <div class="separator"></div>
+    }
+
+    @if ("action" in data) {
+        <button (click)="data.action()">
+            <s-icon class="icon">{{ data.icon }}</s-icon>
+            <!-- <span class="label">{{ data.label }}</span> -->
+        </button>
+    }
+}

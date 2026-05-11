@@ -1,0 +1,7 @@
+<div class="logo">
+    <span class="logo-mark">◈</span>
+</div>
+
+@for (route of routes; track $index) {
+    <s-menu-item class="item" [data]="route" />
+}

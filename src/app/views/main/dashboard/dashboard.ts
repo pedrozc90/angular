@@ -1,7 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, inject, signal } from "@angular/core";
-import { AuthService } from "@app/core/services";
-import { ButtonComponent, ProgressBarComponent, SpinnerComponent } from "@app/shared/components";
+
+import { AuthService, AuthStateService } from "@app/core/services";
+import { ButtonComponent } from "@app/shared/components";
 
 @Component({
 	standalone: true,
@@ -17,7 +18,8 @@ import { ButtonComponent, ProgressBarComponent, SpinnerComponent } from "@app/sh
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent {
-	private readonly auth = inject(AuthService);
+	private readonly authApi = inject(AuthService);
+	private readonly authState = inject(AuthStateService);
 
 	public readonly user = signal<{ name: string; username: string; email: string }>({
 		name: "Luaerror",
@@ -28,7 +30,7 @@ export class DashboardComponent {
 	public refresh(event: Event): void {
 		event.preventDefault();
 
-		this.auth.refresh().subscribe((res) => {
+		this.authApi.refresh().subscribe((res) => {
 			console.log(res);
 		});
 	}
@@ -36,7 +38,7 @@ export class DashboardComponent {
 	public logout(event: Event): void {
 		event.preventDefault();
 
-		this.auth.logout().subscribe((res) => {
+		this.authState.logout().subscribe((res) => {
 			console.log(res);
 		});
 	}

@@ -3,7 +3,7 @@ import { Router, RouterLink } from "@angular/router";
 import { debounce, email, form, required, FormField, minLength, maxLength } from "@angular/forms/signals";
 import { catchError, EMPTY, finalize, max, min, tap } from "rxjs";
 
-import { AuthService, LoginRequest } from "@core/services";
+import { AuthStateService, LoginRequest } from "@core/services";
 import { ButtonComponent, InputComponent } from "@shared/components";
 
 @Component({
@@ -22,7 +22,7 @@ import { ButtonComponent, InputComponent } from "@shared/components";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
-	private readonly auth = inject(AuthService);
+	private readonly auth = inject(AuthStateService);
 	private readonly router = inject(Router);
 
 	/* --- State --- */
@@ -55,8 +55,7 @@ export class LoginComponent {
 
 		this.loading.set(true);
 
-		this.auth
-			.login(data)
+		this.auth.login(data)
 			.pipe(
 				tap(() => {
 					this.router.navigate(["/dashboard"]);
